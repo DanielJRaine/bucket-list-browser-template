@@ -1,4 +1,5 @@
 'use strict';
+require('../../jquery.typewriter.js');
 
 const authEvents = require('./auth/events.js');
 const bucketList = require('./bucketList/events.js');
@@ -10,13 +11,10 @@ const viewstates = require('./ui/viewstates.js');
 $(() => {
   authEvents.addHandlers();
   bucketList.addHandlers();
-  nav.navFunction(); 
-  authUi.switchForm(); 
+  nav.navFunction();
+  authUi.switchForm();
   viewstates.viewchange();
 
     $('#body').show();
     $('#msg').hide();
-
-
-
 });

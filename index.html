@@ -3,7 +3,7 @@
     <head>
       <meta charset="UTF-8">
       <title>Example</title>
-      
+
       <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
       <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
       <script src="http://d3js.org/d3.v3.min.js" language="JavaScript"></script>
@@ -13,7 +13,7 @@
     </head>
 
     <body class="container-fluid">
-    
+
     <div id="msg" style="font-size:largest;">
       Loading, please wait...
     </div>
@@ -31,7 +31,7 @@
       </div>
 
       <div class="auth-forms active-view">
-        
+
         <ul class="auth-tabs">
           <li class="">Sign in</li>
           <li class="active">Sign up</li>
@@ -60,10 +60,12 @@
 
       <button class="get-tasks-btn" type="submit" name="submit">Get tasks</button>
 
-      <ul class="task-list"></ul>
+      <ul class="task-list">
+          <h2 id="task-list-header">What will you accomplish in the time you have left?</h2>
+      </ul>
 
       <div class="user-forms">
-        
+
         <ul class="task-tabs">
           <li>Create task</li>
         </ul>
@@ -87,8 +89,28 @@
 
       <script src="assets/scripts/collapsibleForceLayout.js" language="JavaScript"></script>
       </div>
-    
+
     </div>
 
+    {{!-- typewriter sound/visuals styles and scripts --}}
+      <style>
+          .typeAction {
+            visibility:hidden;
+          }
+          span {
+            padding-left:2px;
+            animation: blink 700ms steps(1) infinite: ;
+            -webkit-animation: blink 700ms steps(1) infinite;
+          }
+            @keyframes blink { 50% { color: transparent; } }
+            @-webkit-keyframes blink { 50% { color: transparent; } }
+          }
+      </style>
+
+    	<audio class="sound" src="typewriter.wav"></audio>
+
+    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    	<script src="jquery.typewriter.js"></script>
+    {{!-- end typewriter sound/visuals styles and scripts--}}
     </body>
 </html>
